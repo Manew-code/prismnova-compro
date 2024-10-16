@@ -150,8 +150,8 @@
             z-index: 1000;
         }
         .nav-dot {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
             background-color: #c6c6c6;
             margin: 10px 0;
@@ -182,9 +182,9 @@
     </div>
 
     <div class="nav-dots">
-        <div class="nav-dot" data-section="home">1</div>
-        <div class="nav-dot" data-section="about-us">2</div>
-        <div class="nav-dot" data-section="sub-unit">3</div>
+        <div class="nav-dot" data-section="home"></div>
+        <div class="nav-dot" data-section="about-us"></div>
+        <div class="nav-dot" data-section="sub-unit"></div>
     </div>
 
     <div class="scroll-container">
@@ -311,15 +311,15 @@
                 <div class="row">
                     <div class="col-md-4">
                         <img src="{{ asset('assets/LOGO PRISM NOVA-03.png') }}" alt="Prism:NOVA Logo" class="logo mb-3">
-                        <h5 class="text-white mb-2">About Prism:NOVA</h5>
+                        <h5 class="text-white mb-2">Prism:NOVA</h5>
                         <p class="text-white mb-0">A New Way of VTuber Entertainment</p>
                     </div>
                     <div class="col-md-4">
                         <h5 class="text-white">Quick Links</h5>
                         <ul class="list-unstyled">
-                            <li><a href="#home" class="text-white">Home</a></li>
-                            <li><a href="#about-us" class="text-white">About Us</a></li>
-                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#infoModal" class="text-white">Divisions</a></li>
+                            <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                            <li><a href="#about-us" class="text-white text-decoration-none">About Us</a></li>
+                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#infoModal" class="text-white text-decoration-none">Divisions</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4">

@@ -8,8 +8,25 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!-- Bootstrap 5 JavaScript Bundle with Popper -->
+    <style>
+        #video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1000;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
+    <video autoplay muted loop id="video-background">
+        <source src="{{ asset('assets/Background baru 2.webm') }}" type="video/webm">
+    </video>
+
     <section class="vh-100 d-flex align-items-center">
         <div class="container-fluid">
                 <div class="row">
