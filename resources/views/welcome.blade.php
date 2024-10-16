@@ -130,8 +130,8 @@
             scroll-snap-type: y mandatory;
             overflow-y: scroll;
             height: 100vh;
-            scrollbar-width: none;  /* Firefox */
-            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
         }
         .scroll-container::-webkit-scrollbar { 
             width: 0;
@@ -140,6 +140,33 @@
         /* Animation styles */
         .section.active {
             opacity: 1;
+        }
+        /* Navigation dots styles */
+        .nav-dots {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+        .nav-dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #c6c6c6;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .nav-dot.active {
+            background-color: #f6f218;
+            transform: scale(1.3);
         }
     </style>
 </head>
@@ -152,6 +179,12 @@
         <button type="button" class="modal-button" data-bs-toggle="modal" data-bs-target="#infoModal">
             <i class="fas fa-info-circle me-2"></i>Division
         </button>
+    </div>
+
+    <div class="nav-dots">
+        <div class="nav-dot" data-section="home">1</div>
+        <div class="nav-dot" data-section="about-us">2</div>
+        <div class="nav-dot" data-section="sub-unit">3</div>
     </div>
 
     <div class="scroll-container">
@@ -225,12 +258,12 @@
             </div>
         </section>
 
-        <section class="section d-flex flex-column justify-content-end" style="background: linear-gradient(to bottom, #ffffff 15%, #000000 15%);">
+        <section id="sub-unit" class="section d-flex flex-column justify-content-end" style="background: linear-gradient(to bottom, #ffffff 15%, #000000 15%);">
             <div class="container mb-4">
                 <div class="row justify-content-center">
                     <h1 class="text-white text-center mb-5">Sub Unit</h1>
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <a href="#" class="btn w-100 d-flex flex-column justify-content-between p-3 h-100" style="background-color: rgba(241, 230, 13, 0.28); border: 5px solid #C9C900; border-radius: 30px; transition: all 0.3s ease;">
+                        <a href="{{ url('/entertainment/rierlam') }}" class="btn w-100 d-flex flex-column justify-content-between p-3 h-100" style="background-color: rgba(241, 230, 13, 0.28); border: 5px solid #C9C900; border-radius: 30px; transition: all 0.3s ease;">
                             <div class="d-flex align-items-center mb-3">
                                 <img src="{{ asset('assets/LOGO PRISM NOVA-03.png') }}" alt="Entertainment" class="me-3" style="width: 50px; height: 35px;">
                                 <h3 class="text-white fw-bold mb-0">Entertainment</h3>
@@ -320,25 +353,25 @@
                     <h3 class="text-center text-black fw-bold mb-4">Pilih Divisi</h3>
                     <div class="row">
                         <div class="col-md-4 mb-3">
-                            <button type="button" class="division-button w-100 d-flex align-items-center justify-content-between" style="background-color: rgba(201, 201, 0, 0.1); border: 1px solid rgb(201, 201, 0);">
+                            <a href="{{ url('/entertainment/rierlam') }}" class="division-button w-100 d-flex align-items-center justify-content-between text-decoration-none" style="background-color: rgba(201, 201, 0, 0.1); border: 1px solid rgb(201, 201, 0);">
                                 <img src="{{ asset('assets/LOGO PRISM NOVA-03.png') }}" alt="Divisi 1" class="me-2" style="width: 30px; height: 30px;">
                                 <span style="color: rgb(0, 0, 0);">Entertainment</span>
                                 <i class="fas fa-chevron-right" style="color: rgb(201, 201, 0);"></i>
-                            </button>
+                            </a>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <button type="button" class="division-button w-100 d-flex align-items-center justify-content-between" style="background-color: rgba(255, 50, 50, 0.1); border: 1px solid rgb(255, 50, 50);">
+                            <a href="#" class="division-button w-100 d-flex align-items-center justify-content-between text-decoration-none" style="background-color: rgba(255, 50, 50, 0.1); border: 1px solid rgb(255, 50, 50);">
                                 <img src="{{ asset('assets/LOGO PRISM NOVA Lingkarya.png') }}" alt="Divisi 2" class="me-2" style="width: 30px; height: 30px;">
                                 <span style="color: rgb(0, 0, 0);">Lingkarya</span>
                                 <i class="fas fa-chevron-right" style="color: rgb(255, 50, 50);"></i>
-                            </button>
+                            </a>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <button type="button" class="division-button w-100 d-flex align-items-center justify-content-between" style="background-color: rgba(0, 145, 255, 0.1); border: 1px solid rgb(0, 145, 255);">
+                            <a href="#" class="division-button w-100 d-flex align-items-center justify-content-between text-decoration-none" style="background-color: rgba(0, 145, 255, 0.1); border: 1px solid rgb(0, 145, 255);">
                                 <img src="{{ asset('assets/LOGO PRISM NOVA Production.png') }}" alt="Divisi 3" class="me-2" style="width: 30px; height: 30px;">
                                 <span style="color: rgb(0, 0, 0);">Production</span>
                                 <i class="fas fa-chevron-right" style="color: rgb(0, 145, 255);"></i>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -350,20 +383,41 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const sections = document.querySelectorAll('.section');
+            const navDots = document.querySelectorAll('.nav-dot');
             
             // Intersection Observer for section transitions
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
+                        updateNavDots(entry.target.id);
                     } else {
                         entry.target.classList.remove('active');
                     }
                 });
-            }, { threshold: 0.1 });
+            }, { threshold: 0.5 });
 
             sections.forEach(section => {
                 observer.observe(section);
+            });
+
+            // Update navigation dots
+            function updateNavDots(activeSection) {
+                navDots.forEach(dot => {
+                    if (dot.dataset.section === activeSection) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+
+            // Smooth scroll to section when clicking on nav dots
+            navDots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const targetSection = document.getElementById(dot.dataset.section);
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                });
             });
         });
     </script>
