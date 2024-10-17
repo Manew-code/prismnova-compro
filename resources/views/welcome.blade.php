@@ -263,7 +263,7 @@
                 <div class="row justify-content-center">
                     <h1 class="text-white text-center mb-5">Sub Unit</h1>
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <a href="{{ url('/entertainment/rierlam') }}" class="btn w-100 d-flex flex-column justify-content-between p-3 h-100" style="background-color: rgba(241, 230, 13, 0.28); border: 5px solid #C9C900; border-radius: 30px; transition: all 0.3s ease;">
+                        <a href="#" class="btn w-100 d-flex flex-column justify-content-between p-3 h-100" style="background-color: rgba(241, 230, 13, 0.28); border: 5px solid #C9C900; border-radius: 30px; transition: all 0.3s ease;">
                             <div class="d-flex align-items-center mb-3">
                                 <img src="{{ asset('assets/LOGO PRISM NOVA-03.png') }}" alt="Entertainment" class="me-3" style="width: 50px; height: 35px;">
                                 <h3 class="text-white fw-bold mb-0">Entertainment</h3>
@@ -353,7 +353,7 @@
                     <h3 class="text-center text-black fw-bold mb-4">Pilih Divisi</h3>
                     <div class="row">
                         <div class="col-md-4 mb-3">
-                            <a href="{{ url('/entertainment/rierlam') }}" class="division-button w-100 d-flex align-items-center justify-content-between text-decoration-none" style="background-color: rgba(201, 201, 0, 0.1); border: 1px solid rgb(201, 201, 0);">
+                            <a href="#" class="division-button w-100 d-flex align-items-center justify-content-between text-decoration-none" style="background-color: rgba(201, 201, 0, 0.1); border: 1px solid rgb(201, 201, 0);">
                                 <img src="{{ asset('assets/LOGO PRISM NOVA-03.png') }}" alt="Divisi 1" class="me-2" style="width: 30px; height: 30px;">
                                 <span style="color: rgb(0, 0, 0);">Entertainment</span>
                                 <i class="fas fa-chevron-right" style="color: rgb(201, 201, 0);"></i>
