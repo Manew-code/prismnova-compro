@@ -29,17 +29,18 @@
             position: relative;
             display: inline-block;
             margin-bottom: 2rem;
+            margin-left: 15rem; /* Added margin to move logo to the right */
         }
         .logo {
-            max-width: 20%;
+            max-width: 30%;
             position: relative;
             z-index: 1;
         }
         .logo-circle {
             position: absolute;
-            width: 24%;
+            width: 40%;
             height: 0;
-            padding-bottom: 24%;
+            padding-bottom: 40%;
             border-radius: 50%;
             background-color: black;
             top: 50%;
@@ -48,28 +49,29 @@
             z-index: 0;
         }
         .characters-img {
-            max-width: 50%;
-            height: auto;
-            margin: 0 auto;
+            width: 130%;
+            height: 130%;
+            margin: -125px auto 0; /* Increased negative margin to move image up further */
             display: block;
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(0); /* Removed translateY to position at the top */
             transition: opacity 0.1s ease-out, transform 0.1s ease-out;
-            position: absolute;
-            top: 0;
+            position: relative;
+            top: 0; /* Added to ensure it's at the top of its container */
         }
         @media (min-resolution: 1.25dppx) {
             .characters-img {
-                max-width: 40%;
+                max-width: 45%; /* Increased from 40% to 45% */
             }
         }
         @media (min-resolution: 1.5dppx) {
             .characters-img {
-                max-width: 30%;
+                max-width: 35%; /* Increased from 30% to 35% */
             }
         }
         .text-content {
             margin-top: 2rem;
+            margin-left: 15rem;
         }
         .modal-button {
             position: absolute;
@@ -119,6 +121,7 @@
             }
             .logo-container {
                 margin-top: 2rem;
+                margin-left: 0; /* Reset margin for mobile */
             }
             .modal-button {
                 top: 10px;
@@ -230,45 +233,39 @@
 
         <section id="about-us" class="section d-flex align-items-center position-relative overflow-hidden">
             <div class="container-fluid position-relative p-0">
-                <div class="position-absolute top-0 start-0" style="transform: translate(-0%, -120%);">
-                    <img src="{{ asset('assets/About Us Kuning.png') }}" alt="Top Left Decoration" class="img-fluid" style="max-width: 600px; height: 200px;">
+                <div class="position-absolute top-0 start-0" style="transform: translate(-0%, -180%);">
+                    <img src="{{ asset('assets/About Us Kuning.png') }}" alt="Top Left Decoration" class="img-fluid" style="max-width: 100%; height: auto;">
                     <div class="position-absolute top-50 start-50 translate-middle">
-                        <h1 class="fw-bold text-black display-3 text-start">About Us</h1>
+                        <h1 class="fw-bold text-black display-2 text-start">About Us</h1>
                     </div>
                 </div>
-                <div class="row mx-0q" style="background-color: rgba(255, 255, 255, 0.789);">
+                <div class="row mx-0q" style="background-color: rgba(255, 255, 255, 0.789); margin-top: -10rem;">
                     <div class="col-12 px-4">
-                        <h3 class="mb-3 ms-3 text-start fw-bold">History and Background</h3>
-                        <p class="ms-3">
+                        <h2 class="mb-4 ms-3 text-start fw-bold">History and Background</h2>
+                        <p class="ms-3 fs-5">
                             Prism:NOVA dimulai sebagai dorongan untuk memberikan pengalaman dan juga visi baru untuk dunia Virtual Youtuber di Indonesia. Perusahaan ini didirikan pada 14 Februari 2023 oleh Muhammad Ghozi Ryandika (SehaCh) dan Norman Iqbal Prihartono (LenV).
                         </p>
-                        <p class="ms-3">
+                        <p class="ms-3 fs-5">
                             Dua orang yang berpengalaman di dunia Virtual Youtuber dan bercita-cita untuk menjadikan Prism:NOVA sebagai salah satu agensi Virtual Youtuber yang berpengaruh di Indonesia hingga mencapai seluruh dunia.
                         </p>
-                        <p class="ms-3">
+                        <p class="ms-3 fs-5">
                             Saat ini, Prism:NOVA sendiri hadir di beberapa platform seperti YouTube, Instagram, TikTok, dan juga X. Prism:NOVA didirikan di Jakarta dan perusahaan memilih Jakarta sebagai basis operasinya karena memberikan akses optimal ke pasar global, regional, dan lokal.
                         </p>
                     </div>
                 </div>
                 <div class="position-absolute bottom-0 start-0 w-100" style="transform: translateY(110%);">
-                    <img src="{{ asset('assets/About us hitam.png') }}" alt="Bottom Left Decoration" class="img-fluid" style="width: 1570px; height: 230px;">
+                    <img src="{{ asset('assets/About us hitam.png') }}" alt="Bottom Left Decoration" class="img-fluid" style="width: 100% height: auto;">
                     <div class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-white px-3 px-md-5">
-                        <div class="row w-100 mb-4">
-                            <div class="col-md-6 mb-3 mb-md-0">
-                                <h3 class="fw-bold">Vision</h3>
-                            </div>
-                            <div class="col-md-6">
-                                <h3 class="fw-bold">Mission</h3>
-                            </div>
-                        </div>
                         <div class="row w-100">
-                            <div class="col-md-6 text-start pe-md-4 mb-3 mb-md-0">
-                                <p style="text-align: justify;">
+                            <div class="col-md-5 mb-3 mb-md-0">
+                                <h2 class="fw-bold mb-3">Vision</h2>
+                                <p class="fs-5" style="text-align: justify;">
                                     Prism:NOVA mempunyai visi untuk menciptakan agency Vtuber yang tidak hanya memberikan hiburan semata mata tetapi mempunyai ingin menciptakan sebuah dunia virtual youtuber environment dengan menonjolkan roleplaying dan world building serta sebagai alternatif wajah baru dunia virtual youtuber di Indonesia.
                                 </p>
                             </div>
-                            <div class="col-md-6 text-start">
-                                <p style="text-align: justify;">
+                            <div class="col-md-5">
+                                <h2 class="fw-bold mb-3">Mission</h2>
+                                <p class="fs-5" style="text-align: justify;">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. At placeat aperiam cum labore qui fuga unde itaque omnis commodi iste alias tenetur, repellat consequatur quidem? Repudiandae distinctio aspernatur nisi dicta.                      
                                 </p>
                             </div>
