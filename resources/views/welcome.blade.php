@@ -184,6 +184,9 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .section:not(.active) .characters-img {
+            display: none;
+        }
         /* Navigation dots styles */
         .nav-dots {
             position: fixed;
