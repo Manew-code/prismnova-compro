@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'Prism:NOVA') }}</title>
+    <link rel="icon" href="{{ asset('assets/LOGO PRISM NOVA-03.png') }}" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -47,10 +48,25 @@
             z-index: 0;
         }
         .characters-img {
-            max-width: 110%;
+            max-width: 50%;
             height: auto;
-            margin-left: -10%;
-            margin-top: -10vh;
+            margin: 0 auto;
+            display: block;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.1s ease-out, transform 0.1s ease-out;
+            position: absolute;
+            top: 0;
+        }
+        @media (min-resolution: 1.25dppx) {
+            .characters-img {
+                max-width: 40%;
+            }
+        }
+        @media (min-resolution: 1.5dppx) {
+            .characters-img {
+                max-width: 30%;
+            }
         }
         .text-content {
             margin-top: 2rem;
@@ -141,6 +157,10 @@
         .section.active {
             opacity: 1;
         }
+        .section.active .characters-img {
+            opacity: 1;
+            transform: translateY(0);
+        }
         /* Navigation dots styles */
         .nav-dots {
             position: fixed;
@@ -191,7 +211,7 @@
         <section id="home" class="section d-flex align-items-center">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-6 mb-3 d-flex justify-content-center">
                         <img src="{{ asset('assets/Company Profile Prism Nova.png') }}" alt="Prism:NOVA Characters" class="characters-img">
                     </div>
                     <div class="col-md-6 text-center">
