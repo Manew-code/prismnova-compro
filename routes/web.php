@@ -1,9 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Jenssegers\Agent\Agent;
 
 Route::get('/', function () {
-    return view('welcome');
+    $agent = new Agent();
+    if ($agent->isMobile() || $agent->isTablet()) {
+        return view('mobilever.welcomemobile');
+    } else {
+        return view('welcome');
+    }
 });
 
 Auth::routes();

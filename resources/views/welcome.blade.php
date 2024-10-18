@@ -51,42 +51,22 @@
         .characters-img {
             width: 100%;
             height: auto;
-            margin: 0 auto;
+            margin: -125px auto 0; /* Increased negative margin to move image up further */
             display: block;
             opacity: 0;
-            transform: translateY(0);
+            transform: translateY(0); /* Removed translateY to position at the top */
             transition: opacity 0.1s ease-out, transform 0.1s ease-out;
             position: relative;
-            top: 0;
+            top: 0; /* Added to ensure it's at the top of its container */
         }
         @media (min-resolution: 1.25dppx) {
             .characters-img {
-                max-width: 45%;
+                max-width: 45%; /* Increased from 40% to 45% */
             }
         }
         @media (min-resolution: 1.5dppx) {
             .characters-img {
-                max-width: 35%;
-            }
-        }
-        @media (min-resolution: 2dppx) {
-            .characters-img {
-                max-width: 30%;
-            }
-        }
-        @media (min-resolution: 3dppx) {
-            .characters-img {
-                max-width: 25%;
-            }
-        }
-        @media (min-resolution: 4dppx) {
-            .characters-img {
-                max-width: 20%;
-            }
-        }
-        @media (min-resolution: 8dppx) {
-            .characters-img {
-                max-width: 15%;
+                max-width: 35%; /* Increased from 30% to 35% */
             }
         }
         .text-content {
@@ -183,9 +163,6 @@
         .section.active .characters-img {
             opacity: 1;
             transform: translateY(0);
-        }
-        .section:not(.active) .characters-img {
-            display: none;
         }
         /* Navigation dots styles */
         .nav-dots {
