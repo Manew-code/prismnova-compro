@@ -32,15 +32,15 @@
             margin-left: 15rem; /* Added margin to move logo to the right */
         }
         .logo {
-            max-width: 30%;
+            max-width: 30%; /* Increased from 30% to 50% */
             position: relative;
             z-index: 1;
         }
         .logo-circle {
             position: absolute;
-            width: 40%;
+            width: 40%; /* Increased from 40% to 60% */
             height: 0;
-            padding-bottom: 40%;
+            padding-bottom: 40%; /* Increased from 40% to 60% */
             border-radius: 50%;
             background-color: black;
             top: 50%;
@@ -49,24 +49,38 @@
             z-index: 0;
         }
         .characters-img {
-            width: 100%;
+            width: 130%;
             height: auto;
-            margin: -125px auto 0; /* Increased negative margin to move image up further */
+            margin: -125px 0 0 -15%; /* Changed margin to move image to the left */
             display: block;
             opacity: 0;
-            transform: translateY(0); /* Removed translateY to position at the top */
+            transform: translateY(0);
             transition: opacity 0.1s ease-out, transform 0.1s ease-out;
             position: relative;
-            top: 0; /* Added to ensure it's at the top of its container */
+            top: 0;
         }
-        @media (min-resolution: 1.25dppx) {
+        @media (max-width: 1200px) {
             .characters-img {
-                max-width: 45%; /* Increased from 40% to 45% */
+                width: 100%;
+                margin-top: -75px;
             }
         }
-        @media (min-resolution: 1.5dppx) {
+        @media (max-width: 992px) {
             .characters-img {
-                max-width: 35%; /* Increased from 30% to 35% */
+                width: 80%;
+                margin-top: -50px;
+            }
+        }
+        @media (max-width: 768px) {
+            .characters-img {
+                width: 60%;
+                margin-top: -25px;
+            }
+        }
+        @media (max-width: 576px) {
+            .characters-img {
+                width: 50%;
+                margin-top: 0;
             }
         }
         .text-content {
@@ -223,7 +237,7 @@
                             <img src="{{ asset('assets/LOGO PRISM NOVA-03.png') }}" alt="Prism:NOVA Logo" class="logo">
                         </div>
                         <div class="text-content">
-                            <h1 class="fw-bold text-uppercase" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">Prism:NOVA</h1>
+                            <h1 class="fw-bold" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">Prism:NOVA</h1>
                             <p class="lead fw-semibold" style="letter-spacing: 1px;">A New Way of VTuber Entertainment</p>
                         </div>
                     </div>
@@ -233,22 +247,22 @@
 
         <section id="about-us" class="section d-flex align-items-center position-relative overflow-hidden">
             <div class="container-fluid position-relative p-0">
-                <div class="position-absolute top-0 start-0" style="transform: translate(-0%, -180%);">
-                    <img src="{{ asset('assets/About Us Kuning.png') }}" alt="Top Left Decoration" class="img-fluid" style="max-width: 100%; height: auto;">
-                    <div class="position-absolute top-50 start-50 translate-middle">
+                <div class="position-absolute top-0 start-0" style="transform: translate(-0%, -200%);">
+                    <img src="{{ asset('assets/About Us Kuning.png') }}" alt="Top Left Decoration" class="img-fluid" style="max-width: 85%; height: auto;">
+                    <div class="position-absolute top-50 start-50 translate-middle" style="left: 33% !important;">
                         <h1 class="fw-bold text-black display-2 text-start">About Us</h1>
                     </div>
                 </div>
-                <div class="row mx-0q" style="background-color: rgba(255, 255, 255, 0.789); margin-top: -10rem;">
+                <div class="row mx-0" style="background-color: rgba(255, 255, 255, 0.789); margin-top: -10rem; margin-left: 10rem;">
                     <div class="col-12 px-4">
-                        <h2 class="mb-4 ms-3 text-start fw-bold">History and Background</h2>
-                        <p class="ms-3 fs-5">
+                        <h2 class="mb-4 ms-4 text-start fw-bold">History and Background</h2>
+                        <p class="ms-4 fs-5">
                             Prism:NOVA dimulai sebagai dorongan untuk memberikan pengalaman dan juga visi baru untuk dunia Virtual Youtuber di Indonesia. Perusahaan ini didirikan pada 14 Februari 2023 oleh Muhammad Ghozi Ryandika (SehaCh) dan Norman Iqbal Prihartono (LenV).
                         </p>
-                        <p class="ms-3 fs-5">
+                        <p class="ms-4 fs-5">
                             Dua orang yang berpengalaman di dunia Virtual Youtuber dan bercita-cita untuk menjadikan Prism:NOVA sebagai salah satu agensi Virtual Youtuber yang berpengaruh di Indonesia hingga mencapai seluruh dunia.
                         </p>
-                        <p class="ms-3 fs-5">
+                        <p class="ms-4 fs-5">
                             Saat ini, Prism:NOVA sendiri hadir di beberapa platform seperti YouTube, Instagram, TikTok, dan juga X. Prism:NOVA didirikan di Jakarta dan perusahaan memilih Jakarta sebagai basis operasinya karena memberikan akses optimal ke pasar global, regional, dan lokal.
                         </p>
                     </div>
