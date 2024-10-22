@@ -75,7 +75,7 @@
     <!-- Vision Section -->
     <div class="container-fluid p-0 mb-5 mt-5">
         <section id="history-vision-mission" class="section min-vh-100 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden">
-            <div class="position-relative w-100 mb-4 about-us-rounded fade-in" style="background-color: #E6DE3F; padding: 1rem;">
+            <div class="position-relative w-100 mb-4 about-us-rounded fade-in" style="background-color: #E6DE3F; padding: 1rem">
                 <h1 class="text-center fw-bold" style="font-size: clamp(2rem, 6vw, 3.5rem); color: #333;">About Us</h1>
             </div>
             <div class="row mx-0 w-100 fade-in" style="background-color: #f8f9fa91; padding: 2rem;">
@@ -109,7 +109,7 @@
             <style>
                 @media (min-width: 320px) {
                     .container-fluid.p-0.mb-5.mt-5 {
-                        margin-top: -10rem !important;
+                        margin-top: -15rem !important;
                     }
                     #history-vision-mission h2 {
                         font-size: 1rem !important;
@@ -126,23 +126,23 @@
                     .about-us-rounded {
                         border-top-right-radius: 300px;
                         border-bottom-right-radius: 300px;
-                        margin-right: 200px
+                        margin-right: 100px
                     }
                     .vision-text, .mission-text, .mission-list {
                         padding-right: 20%;
                     }
                     .container-fluid.p-0.mb-5.mt-5 {
-                        margin-top: -5rem !important;
+                        margin-top: -10rem !important;
                     }
                 }
                 @media (min-width: 425px) {
                     .container-fluid.p-0.mb-5.mt-5 {
-                        margin-top: 0rem !important;
+                        margin-top: -5rem !important;
                     }
                 }
                 @media (min-width: 768px) {
                     .container-fluid.p-0.mb-5.mt-5 {
-                        margin-top: 5rem !important;
+                        margin-top: 0rem !important;
                     }
                 }
             </style>
