@@ -16,4 +16,10 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::prefix('social')->group(function () {
+    Route::get('/oxalydea', function () {
+        return view('linktree.oxalydea');
+    });
+});
+
 
