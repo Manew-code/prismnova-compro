@@ -11,15 +11,13 @@ Route::get('/', function () {
         return view('welcome');
     }
 });
+Route::get('/oxalydea', function () {return view('linktree.oxalydea');});
+Route::get('/fukulian', function () {return view('linktree.fukulian');});
+
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::prefix('social')->group(function () {
-    Route::get('/oxalydea', function () {
-        return view('linktree.oxalydea');
-    });
-});
 
 
